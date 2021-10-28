@@ -2,23 +2,20 @@
   <div class="form">
     <div class="flex">
       <Input v-model="ime" placeholder="Unesite ime i prezime" outline />
-      <Button class="ml-4" color="info" gradient>Confirm</Button>
+      <Button @click="clickMe">Confirm</Button>
     </div>
     {{ ime }}
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    msg: Number
-  },
-  data() {
-    return {
-      ime: ''
+  export default {
+    methods: {
+      clickMe() {
+        alert('Clicked!')
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
